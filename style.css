@@ -18,7 +18,7 @@ body {
        min-height: 100vh;
        display: flex;
        flex-direction: column;
-       background-color: orange;
+       background-color: rgb(0, 136, 255);
        
 }
 
@@ -39,7 +39,11 @@ body {
        --PRICE-BGCOLOR: red;
        --HEADER-COLOR: green;
 
-       /* FONTS */
+       /* PADDINGS */
+
+       --INPUT-PD: 1em;
+       --BUTTON-PD: 2em;
+
 
 }
 
@@ -54,13 +58,10 @@ header {
 }
 
 footer {
-       position: sticky;
-       bottom: 0;
-       width: 100%;
        text-align: center;
        background-color: var(--BGCOLOR);
-       color: var(--COLOR);
-       z-index: 1;
+       color: var(--NAV-COLOR);
+       margin-top: 3rem;
 }
 
 .nav {
@@ -157,6 +158,8 @@ a:active {
        display: flex;
        align-items: center;
        color: white;
+       padding: 0.5rem;
+       border-radius: var(--BORDER-RADIUS);
 }
 
 .main {
@@ -178,6 +181,7 @@ a:active {
        gap: 2em;
        border: var(--IMG-BORDER);
        border-radius: var(--BORDER-RADIUS);
+       padding: 1rem;
        
 
        
@@ -213,4 +217,50 @@ h1 {
 
 .contact {
        flex-grow: 1;
+}
+
+.contact__form {
+       margin-top: 2rem;
+       display: flex;
+       flex-flow: row nowrap;
+       gap: 1rem;
+       justify-content: space-around;
+       padding: 2rem;
+}
+
+.contact__div {
+       display: flex;
+       flex-flow: column nowrap;
+       gap: 1rem;
+}
+.contact__input {
+       padding: var(--INPUT-PD);
+       border-radius: var(--BORDER-RADIUS);
+       width: 30vw;
+}
+
+.contact__input:last-child {
+       padding-bottom: 10em;
+}
+
+.contact__div:nth-child(2) {
+       display: flex;
+       flex-flow: column nowrap;
+       justify-content: space-evenly;
+}
+
+.contact__button {
+       padding: var(--BUTTON-PD);
+       border-radius: var(--BORDER-RADIUS);
+       font-size: 1em;
+       font-weight: bold;
+       background-color: rgb(21, 0, 255);
+}
+
+.contact__button:first-child {
+       color: rgb(0, 255, 0);
+}
+
+.contact__button:last-child {
+       color: rgb(255, 0, 0);
 }

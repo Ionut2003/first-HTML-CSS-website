@@ -17,13 +17,18 @@
        <main class="contact">
               <h1>Scrieti-ne un mesaj aici!</h1>
               <form class = "contact__form">
-                     <label for="name">Numele dumneavoastra: </label>
-                     <input type="text" id = "name" name = "name">
-                     <label for="email">Email-ul dumneavoastra: </label>
-                     <input type="text" id = "email" name = "email">
-                     <label for="mesaj">Mesajul dumneavoastra: </label>
-                     <input type="text" id = "mesaj" name = "mesaj">
-
+                     <div class="contact__div">
+                            <label class = "contact__label" for="name">Numele dumneavoastra: </label>
+                            <input class = "contact__input" placeholder = "Nume" type = "text" id = "name" name = "name">
+                            <label class = "contact__label" for="email">Email-ul dumneavoastra: </label>
+                            <input class = "contact__input" placeholder = "Email" type = "text" id = "email" name = "email">
+                            <label class = "contact__label" for="mesaj">Mesajul dumneavoastra: </label>
+                            <input class = "contact__input" placeholder = "Mesaj" type="text" id = "mesaj" name = "mesaj">
+                     </div>
+                     <div class="contact__div">
+                            <button class="contact__button">Trimite</button>
+                            <button class="contact__button">Reseteaza</button>
+                     </div>
               </form>
        </main>
        <footer>FOOTER</footer>
