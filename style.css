@@ -45,6 +45,10 @@ body {
        --INPUT-PD: 1em;
        --BUTTON-PD: 2em;
 
+       /* FONTS */
+
+       --WELCOME-FS: 2rem;
+
 
 }
 
@@ -60,10 +64,13 @@ header {
 }
 
 footer {
-       text-align: center;
        background-color: var(--BGCOLOR);
        color: var(--NAV-COLOR);
        margin-top: 3rem;
+       padding: 2rem;
+       display: flex;
+       justify-content: space-evenly;
+       align-items: center;
 }
 
 .nav {
@@ -122,11 +129,11 @@ a:active {
        top: 50px;
        left: 50px;
        color: var(--BG-TEXT-COLOR);
-       font-size: 2rem;
+       font-size: var(--WELCOME-FS);
        font-style: italic;
-       background-color: greenyellow;
+       background-color: lightskyblue;
        padding: 1.5rem;
-       animation: fadeIn 1.5s ease-in-out;
+       animation: 1s ease-in-out 0.5s fadeIn;
        border-radius: var(--BORDER-RADIUS);
        
 }
@@ -248,7 +255,7 @@ h1 {
 .contact__input {
        padding: var(--INPUT-PD);
        border-radius: var(--BORDER-RADIUS);
-       width: 30vw;
+       width: 100%;
 }
 
 .contact__input:last-child {
@@ -280,14 +287,28 @@ h1 {
 /* Media Query for Small Devices (Mobile Phones) */
 
 @media screen and (max-width: 613px) {
+
+       /* VARIABLES */
+       :root {
+              --WELCOME-FS: 1rem;
+              --BUTTON-PD: 1em;
+              
+       }
+
+       /*GENERAL STYLING */
        header {
               display: none;
        }
 
+       footer {
+              font-size: 1rem
+       }
+
        .nav {
-              position: absolute;
+              position: fixed;
               flex-flow: column wrap;
               width: 100%;
+              display: none;
        }
 
        .nav__item {
@@ -303,12 +324,13 @@ h1 {
               border-radius: 0;
        }
 
+
        .nav__button {
               display: flex;
               width: 50px;
               height: 50px;
               border: 2px solid grey;
-              position: absolute;
+              position: fixed;
               z-index: 2;
               right: 10px;
               top: 10px;
@@ -324,6 +346,7 @@ h1 {
               height: 2px;
               background-color: white;
        }
+
        
        
 
